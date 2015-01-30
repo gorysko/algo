@@ -8,8 +8,7 @@ def karatsuba(first, second):
     second_c, second_d = split_num(second)
     firsts = karatsuba(first_a, second_c)
     seconds = karatsuba(first_b, second_d)
-    thirds = karatsuba((first_a + first_b), (second_c + second_d)) - \
-        firsts - seconds
+    thirds = karatsuba(first_a, second_d) + karatsuba(first_b, second_c)
     return  ((10**num)*firsts)+((10**num_2)*thirds) + seconds
 
 
