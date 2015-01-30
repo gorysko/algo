@@ -1,3 +1,5 @@
+COUNTER = 0
+
 def karatsuba(first, second):
     """karatsuba algo"""
     num = max(get_range(first), get_range(second))
@@ -8,7 +10,8 @@ def karatsuba(first, second):
     second_c, second_d = split_num(second)
     firsts = karatsuba(first_a, second_c)
     seconds = karatsuba(first_b, second_d)
-    thirds = karatsuba(first_a, second_d) + karatsuba(first_b, second_c)
+    thirds = karatsuba(first_a, second_d) + \
+        karatsuba(first_b, second_c)
     return  ((10**num)*firsts)+((10**num_2)*thirds) + seconds
 
 
