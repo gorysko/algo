@@ -20,7 +20,7 @@ def merge(left, right):
             result.append(left[0])
             left = left[1:]
         else:
-            INVERSIONS += 1
+            INVERSIONS += len(left) - 1
             result.append(right[0])
             right = right[1:]
     while len(left) > 0:
