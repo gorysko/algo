@@ -1,3 +1,8 @@
+"""Merge and sort algo"""
+
+__author__ = "gorysko@gmail.com"
+__description__ = "Merge and sort algo for stanford course on coursera"
+
 INVERSIONS = 0
 
 def merge_sort(array):

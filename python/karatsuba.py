@@ -1,3 +1,8 @@
+"""Karatsuba algo implementation"""
+
+__author__ = "gorysko@gmail.com"
+__description__ = "Karatsuba multiplication implementation for pronetheus"
+
 def karatsuba(first, second):
     """karatsuba algo"""
     if first < 10 or second < 10:
