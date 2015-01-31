@@ -28,9 +28,3 @@ def split_num(num):
     num_range = int(round(get_range(num) / 2.0))
     num = str(num)
     return int(num[:num_range]), int(num[num_range:])
-
-
-
-if __name__ == '__main__':
-    print karatsuba(49823261, 44269423)
-    print karatsuba(49823261, 44269423) == 2205647016448403
