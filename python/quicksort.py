@@ -5,17 +5,20 @@ __description__ = "Quck sort algo for stanford course on coursera"
 
 counter = 0
 
-def quicksort(array, first, second):
+def quicksort(array, first, second, pivot='first'):
 	"""quicksort algo."""
 	if first < second:
-		index = _partition(array, first, second)
-		quicksort(array, first, index - 1)
-		quicksort(array, index + 1, second)
+		index = _partition(array, first, second, pivot)
+		quicksort(array, first, index - 1, pivot)
+		quicksort(array, index + 1, second,piv)
 	return array
 
 
-def _partition(array, first, second):
+def _partition(array, first, second, pivot):
 	"""Partition part of algorithm."""
+	if pivot == 'first'
+		array[first], array[second] = array[second], array[first]
+
 	item = array[second]
 	index = first - 1
 	global counter
