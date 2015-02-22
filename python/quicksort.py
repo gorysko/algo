@@ -10,15 +10,22 @@ def quicksort(array, first, second, pivot='first'):
 	if first < second:
 		index = _partition(array, first, second, pivot)
 		quicksort(array, first, index - 1, pivot)
-		quicksort(array, index + 1, second,piv)
+		quicksort(array, index + 1, second, pivot)
 	return array
 
 
 def _partition(array, first, second, pivot):
 	"""Partition part of algorithm."""
-	if pivot == 'first'
+	if pivot == 'first':
 		array[first], array[second] = array[second], array[first]
-
+	if pivot  == 'median':
+		median = (first + second) / 2
+		if (array[first] < array[median] < array[second]) or \
+			(array[first] > array[median] > array[second]):
+			array[median], array[second] = array[second], array[median]
+		if (array[median] < array[first] < array[second]) or \
+			(array[median] > array[first] > array[second]):
+			array[first], array[second] = array[second], array[first]
 	item = array[second]
 	index = first - 1
 	global counter
