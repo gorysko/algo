@@ -2,6 +2,7 @@
 
 __author__ = "gorysko@gmail.com"
 __description__ = "Merge and sort algo for stanford course on coursera"
+
 counter = 0
 
 def merge_sort(array):
