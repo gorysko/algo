@@ -12,10 +12,11 @@ def hash_insert(lst, item, size):
         size: size of the array
     """
     index = 0
-    while index != size:
+    while index < size:
         hashed = hashing(item, size)
         if lst[hashed] == None:
             lst[hashed] = item
+            return
         else:
             index += 1
 
@@ -30,7 +31,7 @@ def hash_search(lst, item, size):
         Value if it was found or None
     """
     index = 0
-    while index != size:
+    while index < size:
         hashed = hashing(item, size)
         if lst[hashed] == item or lst[hashed] == None:
             return hashed
@@ -41,17 +42,3 @@ def hash_search(lst, item, size):
 def hashing(item, size):
     """Divide model of hashing."""
     return item % size
-
-if __name__ == '__main__':
-    f = open('../test_06.txt')
-    data = [int(i.strip()) for i in f.readlines()]
-    f.close()
-
-    size_test = len(data)
-    test = [None] * size_test
-
-    print 'working...'
-    for value in data:
-        hash_insert(test, value, size_test)
-    print 'finished!'
-    print test[-1]
